@@ -54,7 +54,7 @@ header .user i{
 .form>div{
 	display:none;
 }
-.form .whatsapp{
+.form .config{
 	display: block;
 }
 .form .border{
@@ -275,7 +275,7 @@ header .user i{
 	margin-left: 5px;
 }
 .form .phone .phones{
-	/*display:none;*/
+	display:none;
 }
 .form .phone .phones .phone{
 	display:flex;
