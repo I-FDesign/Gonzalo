@@ -38,7 +38,7 @@ header .user i{
 	color:black;
 }
 .options .option img{
-	height: 100px;
+	height: 80px;
 	width: auto;
 }
 .options .gray img{
@@ -48,17 +48,18 @@ header .user i{
     cursor:pointer;
 }
 .form{
-	margin-top: 70px;
+	/*margin-top: 20px;*/
 	margin-bottom: 50px;
 }
 .form>div{
 	display:none;
 }
-.form .config{
+.form .whatsapp{
 	display: block;
 }
 .form .border{
-	padding: 20px 0;
+	padding-top: 100px;
+	padding-bottom: 20px;
 	padding-left: 35px;
 	border-left: 1px solid black;
 }
@@ -86,6 +87,7 @@ header .user i{
 	border:1px solid rgba(0,0,0,.2);
 	border-radius: 1px;
 	width: 50%;
+	outline: 0px;
 }
 .form .formulario input[type='text']:focus,
 .form .formulario textarea:focus{
@@ -162,6 +164,9 @@ header .user i{
 	margin:0;
 	padding:0;
 	margin-left: 5px;
+}
+.form .dias .fecha{
+	display:none;
 }
 .form .dias .fecha .date{
 	margin-top: 10px;
@@ -269,6 +274,9 @@ header .user i{
 	margin:0;
 	margin-left: 5px;
 }
+.form .phone .phones{
+	/*display:none;*/
+}
 .form .phone .phones .phone{
 	display:flex;
 	width: 100%;
@@ -289,6 +297,9 @@ header .user i{
 /*----------------------------------------------------------*/
 
 @media screen and (max-width: 1000px){
+	header{
+		padding:20px;
+	}
 	.content{
 		max-width: none;
 		width: 95%;
@@ -302,11 +313,166 @@ header .user i{
 	.form .phone .forma{
 		width: 70%;
 	}
+	.form .form_down .acciones .checkboxs,
+	.form .form_down .donde .where{
+		width: 50%;
+	}
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 768px){
+	.form .formulario input[type='text'],
+	.form .formulario textarea,
+	.form .dias .days,
+	.form .form_down .checkboxs,
+	.form .formulario .mensaje p,
+	.form .phone .forma{
+		width: 80%;
+	}
+	.form .form_down .acciones .checkboxs,
+	.form .form_down .donde .where{
+		width: 60%;
+	}
+
+	.form .phone .phones .phone{
+		flex-wrap: wrap;
+		width: 100%;
+		align-items: center;
+	}
+	.form .phone .phones .phone > div{
+		width: 24%;
+	}
+	.form .phone .phones .phone > div.tel{
+		width: 100%;
+		border-bottom: 1px solid rgba(0,0,0,.4);
+		padding-bottom: 9px;
+	}
+}
+
+@media screen and (max-width: 600px){
+	header .logo img{
+		height: 80px;
+	}
+	.options{
+		width: 100%;
+	}
+	.options .option{
+		display: flex;
+		justify-content: center;
+	}
 	.options .option img{
-		height: 90px;
-		width: auto;
+		height: 65px;
+	}
+	.form .formulario input[type='text'],
+	.form .formulario textarea,
+	.form .dias .days,
+	.form .dias .fecha .date,
+	.form .form_down .checkboxs,
+	.form .formulario .mensaje p,
+	.form .phone .forma{
+		width: 90%;
+	}
+	.form .form_down .acciones .checkboxs,
+	.form .form_down .donde .where{
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 500px){
+	header .logo img{
+		height: 60px;
+		align-items: center;
+	}
+	header .user{
+		display:flex;
+		align-items: center;
+	}
+	header .user i{
+		font-size: 40px;
+	}
+	.options{
+		margin-top: 0;
+	}
+	.options .option img{
+		height: 55px;
+	}
+	.form{
+		margin-top: 15px;
+		padding-top: 15px;
+		border-top: 1px solid rgba(0,0,0,.3);
+	}
+	.form .border{
+		border:none;
+		padding:0;
+	}
+	.form a{
+		text-align: center;
+	}
+	.form .phone .phones .phone > div{
+		width: 48%;
+	}
+	.form .formulario input[type='text'],
+	.form .formulario textarea,
+	.form .dias .days,
+	.form .dias .fecha .date,
+	.form .form_down .checkboxs,
+	.form .formulario .mensaje p,
+	.form .phone .forma{
+		width: 100%;
+	}
+	.form .dias .days label,
+	.form .phone .forma label{
+		font-size: 14px;
+	}
+	.form .form_down .acciones .checkboxs,
+	.form .form_down .donde .where{
+		width: 85%;
+	}
+}
+
+@media screen and (max-width: 450px){
+	.options{
+		flex-wrap: wrap;
+	}
+	.options .option{
+		width: 30%;
+		margin-top: 20px;
+	}
+	.options .option img{
+		height: 60px;
+	}
+	.form .phone .dias .days,
+	.form .phone .forma{
+		flex-direction: column;
+		align-items: center;
+	}
+	.form .phone .dias .days>div,
+	.form .phone .forma>div{		
+		margin-top: 5px;
+	}
+}
+@media screen and (max-width: 400px){
+	.form .dias .fecha .date{
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: center;
+	}
+	.form .dias .fecha .date>div{
+		width: 100%;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.form .dias .fecha .date>div label{
+		text-align: center;
+	}
+	
+	.form .form_down .acciones .checkboxs,
+	.form .form_down .donde .where{
+		width: 98%;
+	}
+}
+@media screen and (max-width: 360px){
+	.options .option img{
+		height: 50px;
 	}
 }
