@@ -12,12 +12,21 @@ $('.aleatoria').on('change', function(){
 
 //Days----------------------------------
 
-$('.definir').on('change', function(){
-	$('.fecha').slideToggle(300);
+
+
+$(document).ready(function(){
+
+	verif();
+
+	$('.definir').on('change', function(){
+		$('.fecha').slideToggle(300);
+	});
+
+	$('.todos').on('change', function(){
+		$('.fecha').slideUp(300);
+	});
+
 });
 
-$('.todos').on('change', function(){
-	$('.fecha').slideUp(300);
-});
 
 //----------------------------------------

@@ -37,3 +37,23 @@ var lel = '';
 
 	$('.option').on('click', change);
 
+//Days-----------------------------------------------
+
+function verif(){
+	for(i = 0; i < $('.definir').length; i++){
+		var obj = $('.definir')[i];
+		if(obj.checked){
+			var este = $('.definir')[i];
+			var divdias = ($(este).parents('div.dias'));
+			var fecha = $(divdias).find('div.fecha');
+			$(fecha).css('display', 'block');
+		}else{
+			var este = $('.todos')[i];
+			var divdias = ($(este).parents('div.dias'));
+			var fecha = $(divdias).find('div.fecha');
+			$(fecha).css('display', 'none');
+		}
+	}
+}
+
+//-----------------------------------------------------------
