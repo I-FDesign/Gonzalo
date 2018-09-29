@@ -57,3 +57,13 @@ function verif(){
 }
 
 //-----------------------------------------------------------
+
+//Añadir dias-----------------------------------------------
+
+function add(e){
+	e.preventDefault();
+	var divdias = $(this).parents('div.dias');
+	var divfecha = $(divdias).find('div.fecha');
+	$(divfecha).append(contenido);
+}
+$('.add').on('click', add);

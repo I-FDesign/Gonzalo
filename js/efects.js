@@ -19,11 +19,16 @@ $(document).ready(function(){
 	verif();
 
 	$('.definir').on('change', function(){
-		$('.fecha').slideToggle(300);
+		// $('.fecha')
+		var divdias = $(this).parents('div.dias');
+		var divfecha = $(divdias).find('div.fecha');
+		$(divfecha).slideToggle(300);
 	});
 
 	$('.todos').on('change', function(){
-		$('.fecha').slideUp(300);
+		var divdias = $(this).parents('div.dias');
+		var divfecha = $(divdias).find('div.fecha');
+		$(divfecha).slideUp(300);
 	});
 
 });
