@@ -63,7 +63,7 @@ function verif(){
 function add(e){
 	e.preventDefault();
 	var divdias = $(this).parents('div.dias');
-	var divfecha = $(divdias).find('div.fecha');
-	$(divfecha).append(contenido);
+	var divdates = $(divdias).find('div.dates');
+	$(divdates).append(contenido);
 }
 $('.add').on('click', add);
